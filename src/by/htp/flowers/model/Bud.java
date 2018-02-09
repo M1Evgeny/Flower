@@ -33,8 +33,17 @@ public class Bud {
 	public void loseSomePetals() {
 		this.size = "medium";
 		this.color = "brown";
+		changePetalsColor("orange");
 		for (int i = 0; i < this.petal.length; i += 3) {
 			this.petal[i] = null;
+		}
+	}
+
+	public void changePetalsColor(String color) {
+		for (int i = 0; i < this.petal.length; i++) {
+			if (petal[i] != null) {
+				this.petal[i].color = color;
+			}
 		}
 	}
 }
